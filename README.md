@@ -1,63 +1,60 @@
-#  Medical Appointment No Shows – Data Cleaning task
+# Super Store Sales Dashboard - Power BI Project
 
-This task focuses on cleaning and preprocessing the "Medical Appointment No Shows" dataset from Kaggle. The dataset contains over 110,000 records of medical appointments and whether or not the patients showed up.
+## 📊 Overview
 
----
+This Power BI project visualizes sales and profit data from a fictional Super Store dataset. The dashboard helps analyze business performance across various dimensions like region, category, segment, ship mode, and time.
 
-## Dataset Summary
+## 📌 Features
 
-- Source: [Kaggle – No Show Appointments](https://www.kaggle.com/datasets/joniarroba/noshowappointments)
-- Original Rows: 110,528  
-- Final Cleaned Rows: 110,527
+- **Total Sales, Orders, Profit, and Regions** summarized using KPI cards.
+- **Monthly Sales Trend** comparison for multiple years (YoY).
+- **Sales and Profit Distribution** by:
+  - Payment Mode
+  - Segment
+  - Ship Mode
+  - Category & Sub-Category
+- **Geo Map Visualization** of Sales & Profit by U.S. States.
+- Interactive filters for regions (Central, East, South, West).
+- Clean, user-friendly layout with drill-through capability enabled.
 
----
+## 📂 Data Used
 
-##  Data Cleaning Steps
+The dataset includes fields like:
+- Order Date, Ship Date
+- Sales, Profit, Quantity
+- Customer Details
+- Product Category/Sub-Category
+- Payment Mode, Segment, Region
 
-###  Duplicates
-- Checked for duplicates across all columns
--  No duplicate rows found
+## ⚙ Tools & Technologies
 
-###  Age Column
-- Found 1 negative age value → removed
-- Found multiple `Age = 0` entries →  unclear if valid, so replaced with blanks
+- **Power BI Desktop**
+- Data modeling using Power Query Editor
+- DAX for custom measures (Sales, Profit, YoY)
+- Drill-through & slicers for interactivity
 
-###  Categorical Fields
-- `gender` standardized to `F` and `M`
-- `no_show` converted to uppercase: `YES` / `NO`
+## 📌 How to Use
 
-###  Date Columns
-- `scheduled_day` and `appointment_day` were converted to consistent ISO date format (`DD-MM-YYYY`)
+1. Open `SuperStore_Sales.pbix` file in Power BI Desktop.
+2. Use region slicers to filter data.
+3. Hover on visuals for insights (e.g., tooltips show detailed values).
+4. Use visual filters and map interactions for deeper analysis.
 
-### Column Names
-- All column names converted to `lowercase`
-  - Example: `ScheduledDay` → `scheduled_day`
+## 📷 Screenshot
 
-###  Missing Values
-- Found 1 row with all values missing →  removed
-- `age` had 3540 blank values after replacing zeros
+![Dashboard Screenshot](Screenshot_2025-08-06_202838.png)
 
----
+## 📈 Insights Gained
 
-##  Files in This Repo
+- Most orders come from **Consumer** segment and **Online** mode.
+- **Technology** category leads in revenue.
+- June saw a peak in 2020 sales compared to 2019.
+- Sales and profit distribution varies significantly across states and modes.
 
-- `KaggleV2-May-2016_cleaned.xlsx` – Cleaned Excel dataset
-- `README.md` – This summary of the data cleaning process
+## 📌 Author
 
----
-
-##  Key Learnings
-
-- Real-world datasets often contain noise like missing or invalid values
-- Standardization and consistency are critical for reliable analysis
-- Data cleaning is as important as the analysis itself.
-
----
-
-##  Useful Links
-
-- [Original Dataset on Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments)
+**Shubham Milind Phatkare**  
+_Data Analyst Enthusiast_
 
 ---
-
 
